@@ -216,6 +216,41 @@
 
     $joueurMax = joueurNoteMAX($joueurs);
 
-    echo '<p><u>Meilleur joueur</u> : <b>' . $joueurMax['nom'] . '</b> avec un score de <b>' . $joueurMax['score'] . '</b></p>'
+    echo '<p><u>Meilleur joueur</u> : <b>' . $joueurMax['nom'] . '</b> avec un score de <b>' . $joueurMax['score'] . '</b></p>';
 
+    class MonCompte{
+        private $montant;
+        private $pourcentage_interets;
+
+        function __construct($montant_init, $interets_init) {
+            $this->montant = $montant_init;
+            $this->pourcentage_interets = $interets_init;
+        }
+
+        function getMontant(){
+            return $this->montant;
+        }
+
+        function calculInterets(){
+            $this->montant *= 1 + $this->pourcentage_interets / 100;
+        }
+    }
+
+    // Montant initial sur le compte bancaire
+    $montantING = 100;
+    
+    // Pourcentage d'intérêts
+    $interetsING = 0.25;
+
+    $ING = new MonCompte($montantING, $interetsING);
+
+    echo "<u>ING Direct - montant initial sur mon compte</u> : <b>" . $ING->getMontant() . ' euros</b><br/>';
+
+    // Simulation du temps qui passe (10 ans)
+    for($i = 1; $i <= 10; $i++){
+        // Une nouvelle année
+        $ING->calculInterets();
+    }
+
+    echo "<u>ING Direct - montant après 10 ans sur mon compte</u> : <b>" . $ING->getMontant() . ' euros</b><br/>';
 ?>
