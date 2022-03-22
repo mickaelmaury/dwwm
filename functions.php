@@ -1,3 +1,5 @@
+<?php
+
 /* WooCommerce : filtre pour changer le titre des "Produits apparentés" */
 
 add_filter('gettext', 'wc_change_related_products_title', 10, 3 );
