@@ -51,7 +51,64 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'wc_edit_text_add_cart');
 /* WooCommerce : filtre pour remplacer le texte "Promo" par une image */
 
 function wc_change_flash_sale_badge($html) {
-    return "<img class='badge-promo' src='" . get_stylesheet_directory_uri() . "/img/promo-img.png'>";
+    return "<img class='badge-promo' src='" . get_stylesheet_directory_uri() . "/img/promo-img.png'>"; // image à charger dans le répertoire du thème
 }
 
 add_filter( 'woocommerce_sale_flash', 'wc_change_flash_sale_badge' );
+
+/* WooCommerce : filtre pour supprimer les blocs d'informations onglets sur la fiche produit */
+
+function wc_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );      	// Supprime le bloc "Description"
+    unset( $tabs['reviews'] ); 			// Supprime le bloc "Avis"
+    unset( $tabs['additional_information'] );  	// Supprime le bloc "Information complémentaires"
+
+    return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'wc_remove_product_tabs', 98 );
+
+/* WooCommerce : filtre pour modifier le nom des blocs d'informations sur la fiche produit */
+
+function wc_rename_tabs( $tabs ) {
+   $tabs['description']['title'] = __( 'Learn more about this product', 'oceanwp-child' );		// Renomme le bloc "Description"
+   $tabs['reviews']['title'] = __( 'Our clients opinions', 'oceanwp-child' );				// Renomme le bloc "Avis"
+   $tabs['additional_information']['title'] = __( 'More informations', 'oceanwp-child' );	// Renomme le bloc "Informations complémentaires"
+
+   return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'wc_rename_tabs', 98 );
+
+/* WooCommerce : filtre pour réordonner les blocs d'informations sur la fiche produit */
+
+function wc_reorder_tabs( $tabs ) {
+	$tabs['reviews']['priority'] = 5;			// On affiche les avis en 1er
+	$tabs['description']['priority'] = 10;			// ensuite le bloc "Description" en deuxieme
+	$tabs['additional_information']['priority'] = 15;	// Et enfin les informations complémentaires
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'wc_reorder_tabs', 98 );
+
+/* WooCommerce : ajouter un bloc d'informations sur la fiche produit */
+
+function wc_new_product_tab( $tabs ) {
+	// On ajoute un nouveau bloc
+	$tabs['nouveau_bloc'] = array(
+		'title' 	=> __( 'Delivery details', 'oceanwp-child' ), // à traduire avec Loco Translate, Poedit, ...
+		'priority' 	=> 50,
+		'callback' 	=> 'wc_new_product_tab_content'
+	);
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'wc_new_product_tab' );
+
+function wc_new_product_tab_content() {
+	// Insérez ici le contenu de votre nouveau bloc
+	echo '<h2>' . __( 'Delivery details', 'oceanwp-child' ) . '<h2>'; // à traduire avec Loco Translate, Poedit, ...
+	echo '<p> ... </p>';
+}
