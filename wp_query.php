@@ -21,7 +21,7 @@
                                   <p class="card-text mb-auto"><?php echo strlen(get_the_excerpt()) > 50 ? substr(get_the_excerpt(), 0, 50) . '...' : get_the_excerpt(); ?></p>
                                   <a href="#">Lire plus</a>
                               </div>
-                              <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+                              <img class="card-img-right flex-auto d-none d-lg-block" alt="" src="<?php wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>">
                           </div>
                       </div>
           <?php  endwhile;
