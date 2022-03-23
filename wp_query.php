@@ -4,6 +4,7 @@
           $original_query = $wp_query;
           $wp_query = null;
 
+          // Récupérer 2 articles ayant pour étiquette 'highlight'
           $args=array('posts_per_page' => 2, 'tag' => 'highlight');
           $wp_query = new WP_Query($args);
         
@@ -32,5 +33,3 @@
           wp_reset_postdata();
         ?>
   </div> <!-- /div.row mb-2 -->
-
-<!-- Ex. à placer dans un fichier featured-post.php -->
