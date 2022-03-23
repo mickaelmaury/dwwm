@@ -1,5 +1,23 @@
 <?php
 
+/* Déclarer une sidebar : register_sidebar() */
+
+add_action( 'widgets_init', 'vwf_register_sidebars' );
+
+function vwf_register_sidebars() {
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Primary Sidebar' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div class="p-3 widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="font-italic">',
+            'after_title'   => '</h4>',
+        )
+    );
+}
+
 /* WooCommerce : filtre pour changer le titre des "Produits apparentés" */
 
 add_filter('gettext', 'wc_change_related_products_title', 10, 3 );
