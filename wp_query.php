@@ -30,6 +30,7 @@
           $wp_query = null;
           $wp_query = $original_query;
   
+          // wp_reset_postdata() restaure la variable global $post à l'article courant dans la requête principale
           wp_reset_postdata();
         ?>
   </div> <!-- /div.row mb-2 -->
