@@ -7,7 +7,7 @@
  */
 
   function vwf_wordpress_post_content_rename($text) {
-    $wrong = ['facbeook', 'google', 'wordpress'];
+    $wrong = ['facebook', 'google', 'wordpress'];
     $right = ['Facebook', 'Google', 'Wordpress'];
     
     return str_replace($wrong, $right, $text);
