@@ -31,4 +31,6 @@
   
           wp_reset_postdata();
         ?>
-    </div> <!-- /div.row mb-2 -->
+  </div> <!-- /div.row mb-2 -->
+
+<!-- Ex. à placer dans un fichier featured-post.php -->
