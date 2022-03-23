@@ -14,3 +14,5 @@
   }
 
   add_filter('the_content', 'vwf_wordpress_post_content_rename');
+
+// Fichier à renommer en index.php et à placer dans un répertoire post-content-rename situé dans /wp-content/plugins/ pour pouvoir l'activer en tant qu'extension WordPress //
