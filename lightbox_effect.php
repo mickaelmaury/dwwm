@@ -121,3 +121,5 @@ jQuery(function ($) {
 });
 
 */
+
+// Fichier à renommer en index.php et à placer dans un répertoire lightbox-effect situé dans /wp-content/plugins/ pour pouvoir l'activer en tant qu'extension WordPress //
