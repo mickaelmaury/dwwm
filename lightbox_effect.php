@@ -102,22 +102,21 @@ function resize(source) {
 
 
 // Quand la page est prête
-jQuery(function ($) {
+jQuery(function($) {
     // Ajout d'une balise <div> vide dans le <body>
     $('<div class="lightbox"></div>').prependTo('body');
-
-    // Changer les liens href des images pour appeler la fonction Javascript resize()
-    function changehref(index, attributeValue) {
-        var srcLightboxImage = $(this).attr('href');
-        return ('href', 'javascript:resize("' + srcLightboxImage + '")');
-    }
     
-    $(".wp-block-image a").attr('href', changehref);
+    $('img').click(function(){
+        var srcImage = $(this).attr('src');
+
+        resize(srcImage);
+
+        return false;
+      });
 
     $(".lightbox").click(function () {
         $(".lightbox").fadeOut("fast");
     });
-
 });
 
 */
