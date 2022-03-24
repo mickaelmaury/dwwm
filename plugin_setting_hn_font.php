@@ -86,3 +86,6 @@ function hn_fonts_page_settings(){
   </form>
   <?php
 }
+
+// Fichier à renommer en index.php et à placer dans un répertoire hn-font-settings situé dans /wp-content/plugins/ pour pouvoir l'activer en tant qu'extension WordPress //
+
