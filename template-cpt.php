@@ -20,8 +20,8 @@
 
   $custom_query = new WP_Query($custom_args);
 
-  if($custom_args->have_posts()) :
-    while($custom_args->have_posts()) : $custom_args->the_post();?
+  if($custom_query->have_posts()) :
+    while($custom_query->have_posts()) : $custom_query->the_post();?>
       <header class='page-header'>
         <h3 class='entry-title'>
           <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title();?></a>
