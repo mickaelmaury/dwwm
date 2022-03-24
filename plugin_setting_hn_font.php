@@ -48,3 +48,41 @@ function vwf_hn_fonts_page_menu() {
 }
 
 add_action('admin_menu', 'vwf_hn_fonts_page_menu');
+
+function hn_fonts_settings() {
+    // Enregistrement de nouvelles options de réglages
+    register_setting('hn_setting_group', 'h1_font');
+    register_setting('hn_setting_group', 'h2_font');
+    register_setting('hn_setting_group', 'h3_font');
+}
+
+add_action('admin_init', 'hn_fonts_settings');
+
+function hn_fonts_page_settings(){
+  ?>
+  <h2>Réglages des polices</h2>
+  <form method="post" action="options.php">
+      <?php settings_fields('hn_setting_group'); ?>
+      <?php do_settings_sections('hn_setting_group'); ?>
+      <label>h1</label>
+      <select id="h1_font" name="h1_font">
+          <option <?php if(get_option('h1_font')=="Open Sans" ) echo "selected" ?> value="Open Sans">Open Sans</option>
+          <option <?php if(get_option('h1_font')=="Lato" ) echo "selected" ?> value="Lato">Lato</option>
+          <option <?php if(get_option('h1_font')=="Roboto" ) echo "selected" ?> value="Roboto">Roboto</option>
+      </select><br>
+      <label>h2</label>
+      <select id="h2_font" name="h2_font">
+          <option <?php if(get_option('h2_font')=="Open Sans" ) echo "selected" ?> value="Open Sans">Open Sans</option>
+          <option <?php if(get_option('h2_font')=="Lato" ) echo "selected" ?> value="Lato">Lato</option>
+          <option <?php if(get_option('h2_font')=="Roboto" ) echo "selected" ?> value="Roboto">Roboto</option>
+      </select><br>
+      <label>h3</label>
+      <select id="h3_font" name="h3_font">
+          <option <?php if(get_option('h3_font')=="Open Sans" ) echo "selected" ?> value="Open Sans">Open Sans</option>
+          <option <?php if(get_option('h3_font')=="Lato" ) echo "selected" ?> value="Lato">Lato</option>
+          <option <?php if(get_option('h3_font')=="Roboto" ) echo "selected" ?> value="Roboto">Roboto</option>
+      </select>
+      <?php submit_button(); ?>
+  </form>
+  <?php
+}
