@@ -1,0 +1,18 @@
+.lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox img {
+    max-height: 90%;
+    border: 4px white solid;
+    border-radius: 5px;
+}
