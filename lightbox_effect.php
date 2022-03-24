@@ -77,7 +77,7 @@ add_action('wp_head', 'image_style');
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    cursor: pointer
+    cursor: pointer;
     display: none;
     align-items: center;
     justify-content: center;
