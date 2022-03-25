@@ -8,3 +8,9 @@ function wpchild_enqueue_styles(){
   wp_enqueue_style( 'twentytwentyone-style-child', get_stylesheet_directory_uri() . '/style.css', 
     array('twenty-twenty-two-style'));
 }
+
+function localisation_child_theme(){
+    load_child_theme_textdomain('twentytwentytwo-child', get_stylesheet_directory() . '/languages');
+}
+
+add_action('after_setup_theme', 'localisation_child_theme');
