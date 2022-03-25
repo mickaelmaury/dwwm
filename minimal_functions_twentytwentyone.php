@@ -19,14 +19,3 @@ function twentytwentyone_child_setup() {
 }
 
 add_action( 'after_setup_theme', 'twentytwentyone_child_setup' );
-
-function add_div_title( $title, $id = null ) {
-  if(!is_admin()){
-      if(get_post_type($id) === 'film')
-      $title = '<span class="my-custom-title-class">' . $title . '</span>';
-  }
-
-  return $title;
-}
-
-add_filter( 'the_title', 'add_div_title', 10, 2 );
