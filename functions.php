@@ -3,10 +3,13 @@
 /* Ajouter une balise HTML autour du title */
 
 function add_div_title( $title, $id = null ) {
-    $title = '<div class="my-custom-title-class">' . $title . '</div>';
+    if(!is_admin()){
+        $title = '<div class="my-custom-title-class">' . $title . '</div>';
+    }
  
     return $title;
 }
+
 add_filter( 'the_title', 'add_div_title', 10, 2 );
 
 /* Déclarer une sidebar : register_sidebar() */
