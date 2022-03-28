@@ -28,3 +28,40 @@ function bootstrap_child_setup()
 }
 
 add_action('after_setup_theme', 'bootstrap_child_setup');
+
+// Laisser WordPress s'occuper des titres, sans ce soucier d'ajouter une balise <title></title>
+add_theme_support('title-tag');
+
+// Permettre de paramétrer un logo personnalisé (récupérée par the_custom_logo())
+add_theme_support('custom-logo', array(
+  'height' => 150,
+  'width' => 150
+));
+
+// Permettre de paramétrer une image d'en-tête personnalisée (récupérée par header_image())
+add_theme_support('custom-header');
+
+// Permettre de paramétrer l'image à la une
+add_theme_support('post-thumbnails');
+
+// Permettre de paramétrer les menus
+add_theme_support('menus');
+
+// Permettre de paramétrer les widgets
+add_theme_support('widgets');
+
+if (!function_exists('bootstrap_register_nav_menu')) {
+
+  function bootstrap_register_nav_menu()
+  {
+    register_nav_menus(array(
+      'primary_menu' => __('Primary Menu', 'bootstrap-child'),
+      'footer_menu'  => __('Footer Menu', 'bootstrap-child'),
+    ));
+
+    // On ajoute une classe php permettant de gérer les menus Bootstrap
+    require_once get_template_directory() . '/assets/class-wp-bootstrap-navwalker.php';
+  }
+
+  add_action('after_setup_theme', 'bootstrap_register_nav_menu', 0);
+}
