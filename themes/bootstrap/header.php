@@ -33,12 +33,12 @@
                 <?php
                 if (has_custom_logo()) :
                     $custom_logo_id = get_theme_mod('custom_logo');
-                    $image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                    $image = wp_get_attachment_image_src($custom_logo_id, 'logo-thumb');
                 else :
                     bloginfo('name');
                 endif;
                 ?>
-                <img src="<?php echo $image[0]; ?>" alt="<?php bloginfo('name'); ?>" width=150 height=150>
+                <img src="<?php echo $image[0]; ?>" alt="<?php bloginfo('name'); ?>">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <?php _e('Menu', 'bootstrap-child'); ?>
@@ -59,10 +59,7 @@
                 )); ?>
             <?php endif; ?>
 
-            <!--<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>-->
+            <!--<a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a>-->
         </div>
     </nav>
 
@@ -79,7 +76,23 @@
                         <?php 
                             else :
                         ?>
-                            <h1><?php the_title(); ?></h1>
+                            <?php if(is_archive()) : ?>
+                                <?php if(get_post_type() != 'projet') : ?>
+                                    <h1><?php echo get_the_archive_title(); ?></h1>
+                                <?php else : ?>
+                                    <h1><?php echo get_post_type_object('projet')->labels->name; ?></h1>
+                                <?php endif; ?>
+                            <?php else : ?>
+                                <?php if(is_404()) : ?>
+                                <h1><?php _e('Oopss ! Request page not found !', 'bootstrap-child'); ?></h1>
+                                <?php else : ?>
+                                    <?php if(is_search()) : ?>
+                                        <h1><?php printf( __( 'Search results for: %s', 'bootstrap-child' ), get_search_query()); ?></h1>
+                                    <?php else : ?>
+                                        <h1><?php the_title(); ?></h1>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            <?php endif; ?>
                         <?php 
                             endif;
                         ?>
@@ -91,6 +104,10 @@
     </header>
 
     <!-- Main Content-->
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
+    <div class="container" id="maincontent">
+        <div class="row">
+        <?php if((get_post_type() != 'projet') && (!is_404()) && (!is_page()) || (is_search()) || (is_single())) : ?>
+            <div class="col-lg-8">
+        <?php else : ?>
+            <div class="col-lg-12">
+        <?php endif; ?>
