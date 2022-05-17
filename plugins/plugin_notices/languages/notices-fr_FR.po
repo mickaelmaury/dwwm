@@ -1,0 +1,61 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCron\n"
+"POT-Creation-Date: 2020-03-19 16:43+0100\n"
+"PO-Revision-Date: \n"
+"Language-Team: Vincent Dubroeucq <vincent@vincentdubroeucq.com>\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 32-notices.php:30
+msgid "This is a basic notice."
+msgstr "C'est une notice de base."
+
+#: 32-notices.php:33
+msgid "This is a SUCCESS notice."
+msgstr "C'est une notice de type SUCCÈS."
+
+#: 32-notices.php:36
+msgid "This is an ERROR notice."
+msgstr "C'est une notice de type ERREUR."
+
+#: 32-notices.php:39
+msgid "This is a WARNING notice."
+msgstr "C'est une notice de type AVERTISSEMENT."
+
+#: 32-notices.php:42
+msgid "This is an INFO notice."
+msgstr "C'est une notice de type INFORMATION."
+
+#: 32-notices.php:45
+msgid "This is a DISMISSABLE notice."
+msgstr "C'est une notice SUPPRIMABLE."
+
+#: 32-notices.php:74
+#, php-format
+msgid ""
+"It looks like your profile description is empty. We highly recommend you "
+"fill it in. You can do so by visiting <a href=\"%s\">your profile page.</a>. "
+"If you do not wish to enter a description, <a href=\"%s\">click to never be "
+"bothered again</a>."
+msgstr ""
+"On dirait que la biographie de votre profil est vide. Nous vous recommandons "
+"fortement de la remplir. Vous pouvez le faire en visitant <a href=\"%s"
+"\">votre page de profil</a>. Si vous ne voulez pas entrer de biographie, <a "
+"href=\"%s\">cliquez ici pour ne plus jamais être dérangé</a>."
