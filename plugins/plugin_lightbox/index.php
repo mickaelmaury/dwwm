@@ -3,8 +3,13 @@
   Plugin Name: VWF Lightbox
   Description: Votre Webmaster Freelance - Affichage des images en effet Lightbox au clic
   Author: Mickaël Maury
+  Author URI:        https://mickael-maury.fr/
+  License:           GPL v2 or later
+  License URI:       https://mickael-maury.fr/
   Version: 1.0.0
  */
+
+defined( 'ABSPATH' ) || die();
 
 function vwm_load_files_lightbox()
 {
