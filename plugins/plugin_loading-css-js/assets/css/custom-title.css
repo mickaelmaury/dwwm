@@ -1,0 +1,57 @@
+h2.custom-title {
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Oswald', cursive;
+    transition:.2s ease-in-out;
+  }
+  
+  h2.custom-title:hover {
+    background-color: #000000;
+    color: #ffffff;
+    cursor:pointer;
+  }
+
+  @keyframes fade{
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  h2.custom-title::before, h2.custom-title::after {
+    animation: fade .2s linear .7s 0 backwards;
+  }
+
+  h2.custom-title:hover::before{
+    content: attr(data-title);
+    position: absolute;
+    bottom: -29px;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 2px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 12px;
+    font-family: sans-serif;
+    white-space: nowrap;
+  }
+  
+  h2.custom-title:hover::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    display: inline-block;
+    color: #fff;
+    border: 8px solid transparent;	
+    border-bottom: 8px solid rgba(0,0,0,.5);
+  }
