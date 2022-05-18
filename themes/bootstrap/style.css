@@ -7,7 +7,7 @@ Author URI: https://mickael-maury.fr
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html     
-Text Domain: bootstrap-child
+Text Domain: bootstrap
 Domain Path: /languages
 */
 
@@ -309,10 +309,11 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
-svg {
+img, svg {
   vertical-align: middle;
   max-width: 100%;
+  max-height: 100%;
+  height: auto;
 }
 
 table {
@@ -4543,7 +4544,10 @@ textarea.form-control-lg {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .card-group > .card {

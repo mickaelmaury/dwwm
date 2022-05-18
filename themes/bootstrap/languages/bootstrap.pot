@@ -1,0 +1,321 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootstrap\n"
+"POT-Creation-Date: 2022-05-18 23:18+0200\n"
+"PO-Revision-Date: 2022-05-18 23:18+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:7
+msgid "404 Not Found"
+msgstr ""
+
+#: 404.php:8
+msgid "Sorry, an error has occured, Requested page not found !"
+msgstr ""
+
+#: 404.php:10
+msgid "Take Me Home"
+msgstr ""
+
+#: 404.php:12
+msgid "Do you want to do a search ?"
+msgstr ""
+
+#: archive-project.php:18
+msgid "ALL"
+msgstr ""
+
+#: archive-project.php:63
+msgid "Category :"
+msgstr ""
+
+#: archive-project.php:69
+msgid "Close Project"
+msgstr ""
+
+#: assets/class-wp-bootstrap-navwalker.php:368
+msgid "Add a menu"
+msgstr ""
+
+#: assets/wp-bootstrap-comment-walker.php:49
+msgid "Edit"
+msgstr ""
+
+#: assets/wp-bootstrap-comment-walker.php:64
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:23
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:36
+msgctxt "bootstrap"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:40
+msgctxt "bootstrap"
+msgid "Name"
+msgstr ""
+
+#: comments.php:46
+msgctxt "bootstrap"
+msgid "Email"
+msgstr ""
+
+#: comments.php:52
+msgctxt "bootstrap"
+msgid "Website"
+msgstr ""
+
+#: content-none.php:7
+msgid "No content"
+msgstr ""
+
+#: content-none.php:8
+msgid "The search returned no results !"
+msgstr ""
+
+#: footer.php:7
+msgid "Search"
+msgstr ""
+
+#: footer.php:14
+msgid "Categories"
+msgstr ""
+
+#: footer.php:52
+msgid "Customer testimonials"
+msgstr ""
+
+#: footer.php:53
+msgid "Our customers love working with us"
+msgstr ""
+
+#: footer.php:78
+msgid "Our team"
+msgstr ""
+
+#: footer.php:79
+msgid "Specialists at your service."
+msgstr ""
+
+#: footer.php:102
+msgid "Address"
+msgstr ""
+
+#: footer.php:112
+msgid "Email"
+msgstr ""
+
+#: footer.php:122
+msgid "Phone"
+msgstr ""
+
+#: footer.php:165
+msgid "Copyright"
+msgstr ""
+
+#: functions.php:76
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:77
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:181
+msgid "Phone :"
+msgstr ""
+
+#: functions.php:200
+msgid "E-mail address :"
+msgstr ""
+
+#: functions.php:219
+msgid "Address :"
+msgstr ""
+
+#: functions.php:237
+msgid "Alert content :"
+msgstr ""
+
+#: functions.php:256
+msgid "Show alert box"
+msgstr ""
+
+#: functions.php:275
+msgid "Alert box alignment :"
+msgstr ""
+
+#: functions.php:302
+msgid "Categories background color :"
+msgstr ""
+
+#: header.php:44
+msgid "Menu"
+msgstr ""
+
+#: header.php:87
+msgid "Oopss ! Request page not found !"
+msgstr ""
+
+#: header.php:90
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: header.php:136
+msgid "Hightlight Posts"
+msgstr ""
+
+#: header.php:160 index.php:47
+msgid "Posted by"
+msgstr ""
+
+#: header.php:162 index.php:49
+msgid "on"
+msgstr ""
+
+#: header.php:171 index.php:58
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:183 index.php:76
+msgid "Read more →"
+msgstr ""
+
+#: inc/portfolio-type.php:7
+msgid "Portfolio"
+msgstr ""
+
+#: inc/portfolio-type.php:8
+msgid "Project"
+msgstr ""
+
+#: inc/portfolio-type.php:23
+msgid "Project Types"
+msgstr ""
+
+#: inc/portfolio-type.php:23
+msgid "Project Type"
+msgstr ""
+
+#: inc/portfolio-type.php:26
+msgid "Project detail"
+msgstr ""
+
+#: inc/portfolio-type.php:37 inc/testimonial-type.php:33
+msgid "Client name"
+msgstr ""
+
+#: inc/team-type.php:9 inc/team-type.php:10
+msgid "Team"
+msgstr ""
+
+#: inc/team-type.php:24
+msgid "Team detail"
+msgstr ""
+
+#: inc/team-type.php:35
+msgid "Team function"
+msgstr ""
+
+#: inc/testimonial-type.php:7 inc/testimonial-type.php:8
+msgid "Testimonial"
+msgstr ""
+
+#: inc/testimonial-type.php:22
+msgid "Testimonial detail"
+msgstr ""
+
+#: index.php:95
+msgid "Previous Post :"
+msgstr ""
+
+#: index.php:103
+msgid "Next Post :"
+msgstr ""
+
+#: searchform.php:3
+msgid "Enter search term ..."
+msgstr ""
+
+#: searchform.php:5
+msgid "Go !"
+msgstr ""
+
+#: template-contact.php:14
+msgid ""
+"You cannot give me less than or equal to 0 coffees. I don't live only on "
+"love and fresh water."
+msgstr ""
+
+#: template-contact.php:19
+msgid "Thank's for this coffee, more energy drink ^^"
+msgstr ""
+
+#: template-contact.php:19
+msgid "Total coffees drunk so far : "
+msgstr ""
+
+#: template-contact.php:42
+msgid "Give value :"
+msgstr ""
+
+#: template-contact.php:43
+msgid "Enter give value"
+msgstr ""
+
+#: template-contact.php:44
+msgid "How many coffee offer me ?"
+msgstr ""
+
+#: template-contact.php:46
+msgid "Send"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Bootstrap"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://mickael-maury.fr"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme Boostrap"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mickael Maury"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact */"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Stats"
+msgstr ""

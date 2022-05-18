@@ -1,83 +1,60 @@
 </div>
-<?php if((get_post_type() != 'projet') && (!is_404())  && (!is_page()) || (is_search()) || (is_single())) : ?>
-<!-- Side widgets-->
-<div class="col-lg-4">
-	<!-- Search widget-->
-	<div class="card mb-4">
-		<div class="card-header"><?php _e('Search', 'bootstrap-child'); ?></div>
-		<div class="card-body">
-			<?php get_search_form(); ?>
-		</div>
-	</div>
-	<!-- Categories widget-->
-	<div class="card mb-4">
-		<div class="card-header"><?php _e('Categories', 'bootstrap-child'); ?></div>
-		<div class="card-body">
-			<div class="row">
-				<?php
-				$all_categories = get_categories(array(
-					'orderby' => 'name',
-					'parent'  => 0
-				));
-				echo "<div class='col-sm-6'>
-							<ul class='list-unstyled mb-0'>";
-				foreach ($all_categories as $categories_item) {
-					echo "<li>";
-					printf(
-						'<a href="%1$s">%2$s</a><br />',
-						esc_url(get_category_link($categories_item->term_id)),
-						esc_html($categories_item->name)
-					);
-					echo "</li>";
-				}
-				echo "</ul>
-						</div>";
-				?>
+<?php if ((get_post_type() != 'project') && (!is_404())  && (!is_page()) || (is_search()) || (is_single())) : ?>
+	<!-- Side widgets-->
+	<div class="col-lg-4">
+		<!-- Search widget-->
+		<div class="card mb-4">
+			<div class="card-header"><?php _e('Search', 'bootstrap'); ?></div>
+			<div class="card-body">
+				<?php get_search_form(); ?>
 			</div>
 		</div>
+		<!-- Categories widget-->
+		<div class="card mb-4">
+			<div class="card-header"><?php _e('Categories', 'bootstrap'); ?></div>
+			<div class="card-body">
+				<div class="row">
+					<?php
+					$all_categories = get_categories(array(
+						'orderby' => 'name',
+						'parent'  => 0
+					));
+					echo "<div class='col-sm-6'>
+							<ul class='list-unstyled mb-0'>";
+					foreach ($all_categories as $categories_item) {
+						echo "<li>";
+						printf(
+							'<a href="%1$s">%2$s</a><br />',
+							esc_url(get_category_link($categories_item->term_id)),
+							esc_html($categories_item->name)
+						);
+						echo "</li>";
+					}
+					echo "</ul>
+						</div>";
+					?>
+				</div>
+			</div>
+		</div>
+		<!-- Side widget-->
+		<?php if (is_active_sidebar('sidebar-content')) :
+			dynamic_sidebar('sidebar-content');
+		endif;
+		?>
 	</div>
-	<!-- Side widget-->
-	<div class="card mb-4">
-		<div class="card-header">Side Widget</div>
-		<div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-	</div>
-</div>
 <?php endif; ?>
-</div>
-<div class="row">
-	<?php
-	if (((!is_single()) && (!is_page()) && (!is_404())) && (get_post_type() != 'projet')) :
-	?>
-		<!-- Pagination-->
-		<!--<nav aria-label="Pagination">
-			<hr class="my-0" />
-			<ul class="pagination justify-content-center my-4">
-				<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-				<li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-				<li class="page-item"><a class="page-link" href="#!">2</a></li>
-				<li class="page-item"><a class="page-link" href="#!">3</a></li>
-				<li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-				<li class="page-item"><a class="page-link" href="#!">15</a></li>
-				<li class="page-item"><a class="page-link" href="#!">Older</a></li>
-			</ul>
-		</nav>-->
-		<?php
-		wp_boostrap_4_pagination();
-
-	endif;
-	?>
 </div>
 </div>
 <!-- Footer-->
-<footer class="border-top py-5">
+<footer class="border-top py-5 bg-dark">
 	<div class="container px-5 my-5 px-5">
 		<div class="text-center mb-5">
-			<h2 class="fw-bolder"><?php _e('Customer testimonials', 'bootstrap-child'); ?></h2>
-			<p class="lead mb-0"><?php _e('Our customers love working with us', 'bootstrap-child'); ?></p>
+			<h2 class="fw-bolder text-white"><?php _e('Customer testimonials', 'bootstrap'); ?></h2>
+			<p class="lead mb-0 text-white"><?php _e('Our customers love working with us', 'bootstrap'); ?></p>
 		</div>
 		<div class="row gx-5 justify-content-center">
 			<div class="col-lg-6">
-				<?php $loop = new WP_Query(array('post_type' => 'temoignage')); ?>
+				<?php $loop = new WP_Query(array('post_type' => 'testimonial')); ?>
 				<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 					<!-- Testimonial 1-->
 					<div class="card mb-4">
@@ -96,6 +73,25 @@
 			</div>
 		</div>
 	</div>
+	<div class="container px-5 my-5 px-5">
+		<div class="text-center mb-5">
+			<h2 class="fw-bolder text-white"><?php _e('Our team', 'bootstrap'); ?></h2>
+			<p class="lead mb-0 text-white"><?php _e('Specialists at your service.', 'bootstrap'); ?></p>
+		</div>
+		<div class="row gx-5 justify-content-center">
+			<div class="col-lg-12">
+				<section class="py-5 bg-light">
+					<div class="container px-5 my-5">
+						<div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+							<?php
+							get_template_part('inc/team');
+							?>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
 	<!-- Contact-->
 	<div class="container px-4 px-lg-5 mb-4">
 		<div class="row gx-4 gx-lg-5">
@@ -103,7 +99,7 @@
 				<div class="card py-4 h-100">
 					<div class="card-body text-center">
 						<i class="fas fa-map-marked-alt text-primary mb-2"></i>
-						<h4 class="text-uppercase m-0"><?php _e('Address', 'bootstrap-child'); ?></h4>
+						<h4 class="text-uppercase m-0"><?php _e('Address', 'bootstrap'); ?></h4>
 						<hr class="my-4 mx-auto" />
 						<div class="small text-black-50"><?php echo get_theme_mod('adresse_postale'); ?></div>
 					</div>
@@ -113,7 +109,7 @@
 				<div class="card py-4 h-100">
 					<div class="card-body text-center">
 						<i class="fas fa-envelope text-primary mb-2"></i>
-						<h4 class="text-uppercase m-0"><?php _e('Email', 'bootstrap-child'); ?></h4>
+						<h4 class="text-uppercase m-0"><?php _e('Email', 'bootstrap'); ?></h4>
 						<hr class="my-4 mx-auto" />
 						<div class="small text-black-50"><a href="mailto:<?php echo get_theme_mod('adresse_email'); ?>"><?php echo get_theme_mod('adresse_email'); ?></a></div>
 					</div>
@@ -123,7 +119,7 @@
 				<div class="card py-4 h-100">
 					<div class="card-body text-center">
 						<i class="fas fa-mobile-alt text-primary mb-2"></i>
-						<h4 class="text-uppercase m-0"><?php _e('Phone', 'bootstrap-child'); ?></h4>
+						<h4 class="text-uppercase m-0"><?php _e('Phone', 'bootstrap'); ?></h4>
 						<hr class="my-4 mx-auto" />
 						<div class="small text-black-50"><?php echo get_theme_mod('numero_telephone'); ?></div>
 					</div>
@@ -166,7 +162,7 @@
 						</a>
 					</li>
 				</ul>
-				<div class="small text-center text-muted fst-italic">Copyright &copy; Your Website <?php echo date('Y'); ?></div>
+				<div class="small text-center text-muted fst-italic text-white"><?php _e('Copyright', 'bootstrap'); ?> &copy; <?php echo bloginfo('name'); ?> <?php echo date('Y'); ?></div>
 			</div>
 		</div>
 	</div>

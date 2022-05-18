@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootstrap\n"
+"POT-Creation-Date: 2022-05-17 22:39+0200\n"
+"PO-Revision-Date: 2022-05-18 12:48+0000\n"
+"Last-Translator: Mickaël Maury\n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.6.1; wp-5.9.3"
+
+#: header.php:171 index.php:72
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s commentaire"
+msgstr[1] "%s commentaires"
+
+#: 404.php:7
+msgid "404 Not Found"
+msgstr "Erreur 404 - Page non trouvée"
+
+#: assets/class-wp-bootstrap-navwalker.php:368
+msgid "Add a menu"
+msgstr "Ajouter un menu"
+
+#: footer.php:102
+msgid "Address"
+msgstr "Adresse"
+
+#: functions.php:219
+msgid "Address :"
+msgstr "Adresse"
+
+#: functions.php:275
+msgid "Alert box alignment :"
+msgstr "Alignement de la boîte d'alerte"
+
+#: functions.php:237
+msgid "Alert content :"
+msgstr "Contenu de l'alerte"
+
+#: archive-project.php:18
+msgid "ALL"
+msgstr "TOUS"
+
+#. Theme Name of the plugin/theme
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: comments.php:36
+msgctxt "bootstrap"
+msgid "Comment"
+msgstr "Commentaire"
+
+#: comments.php:46
+msgctxt "bootstrap"
+msgid "Email"
+msgstr "Adresse e-mail"
+
+#: comments.php:40
+msgctxt "bootstrap"
+msgid "Name"
+msgstr "Nom"
+
+#: comments.php:52
+msgctxt "bootstrap"
+msgid "Website"
+msgstr "Site web"
+
+#: footer.php:14
+msgid "Categories"
+msgstr "Catégories"
+
+#: functions.php:302
+msgid "Categories background color :"
+msgstr "Couleur d'arrière-plan des catégories :"
+
+#: archive-project.php:63
+msgid "Category :"
+msgstr "Catégorie :"
+
+#: inc/portfolio-type.php:37 inc/testimonial-type.php:33
+msgid "Client name"
+msgstr "Nom du client"
+
+#: archive-project.php:69
+msgid "Close Project"
+msgstr "Fermer Projet"
+
+#: comments.php:23
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés"
+
+#. Template Name of the plugin/theme
+msgid "Contact */"
+msgstr "Contact"
+
+#: footer.php:165
+msgid "Copyright"
+msgstr "Tous droits réservés"
+
+#: footer.php:52
+msgid "Customer testimonials"
+msgstr "Témoignages clients"
+
+#: 404.php:12
+msgid "Do you want to do a search ?"
+msgstr "Voulez-vous effectuer une recherche ?"
+
+#: functions.php:200
+msgid "E-mail address :"
+msgstr "E-mail :"
+
+#: assets/wp-bootstrap-comment-walker.php:49
+msgid "Edit"
+msgstr "Editer"
+
+#: footer.php:112
+msgid "Email"
+msgstr "Adresse mail"
+
+#: searchform.php:3
+msgid "Enter search term ..."
+msgstr "Entrez votre recherche ..."
+
+#: functions.php:77
+msgid "Footer Menu"
+msgstr "Menu du pied de page"
+
+#: searchform.php:5
+msgid "Go !"
+msgstr "Aller !"
+
+#: header.php:123
+msgid "Hightlight Posts"
+msgstr "Articles mis en lumière"
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://mickael-maury.fr"
+msgstr "https://mickael-maury.fr"
+
+#: header.php:44
+msgid "Menu"
+msgstr "Menu"
+
+#. Author of the plugin/theme
+msgid "Mickael Maury"
+msgstr "Mickael Maury"
+
+#: content-none.php:7
+msgid "No content"
+msgstr "Aucun contenu"
+
+#: header.php:162 index.php:63
+msgid "on"
+msgstr "on"
+
+#: header.php:87
+msgid "Oopss ! Request page not found !"
+msgstr "Oopss ! La page demandée n'a pas été trouvée !"
+
+#: footer.php:53
+msgid "Our customers love working with us"
+msgstr "Nos clients aiment travailler avec nous"
+
+#: footer.php:78
+msgid "Our team"
+msgstr "Notre équipe"
+
+#: footer.php:122
+msgid "Phone"
+msgstr "Téléphone"
+
+#: functions.php:181
+msgid "Phone :"
+msgstr "Téléphone : "
+
+#: inc/portfolio-type.php:7
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: header.php:160 index.php:61
+msgid "Posted by"
+msgstr "Publié par"
+
+#: functions.php:76
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: inc/portfolio-type.php:8
+msgid "Project"
+msgstr "Projet"
+
+#: inc/portfolio-type.php:26
+msgid "Project detail"
+msgstr "Détail du projet"
+
+#: inc/portfolio-type.php:23
+msgid "Project Type"
+msgstr "Type de projet"
+
+#: inc/portfolio-type.php:23
+msgid "Project Types"
+msgstr "Types de projets"
+
+#: header.php:183 index.php:90
+msgid "Read more →"
+msgstr "Lire la suite  →"
+
+#: footer.php:7
+msgid "Search"
+msgstr "Rechercher"
+
+#: header.php:90
+#, php-format
+msgid "Search results for: %s"
+msgstr "Résultats de recherche pour: %s"
+
+#: functions.php:256
+msgid "Show alert box :"
+msgstr "Voir la boîte d'alerte :"
+
+#: 404.php:8
+msgid "Sorry, an error has occured, Requested page not found !"
+msgstr ""
+"Désolé, une erreur est survenue, la page demandée n'a pas été trouvée !"
+
+#: footer.php:79
+msgid "Specialists at your service."
+msgstr "Des spécialistes à votre service."
+
+#. Template Name of the plugin/theme
+msgid "Stats"
+msgstr "Statistiques"
+
+#: 404.php:10
+msgid "Take Me Home"
+msgstr "Retour à la page d'accueil"
+
+#: inc/team-type.php:9 inc/team-type.php:10
+msgid "Team"
+msgstr "Équipe"
+
+#: inc/team-type.php:24
+msgid "Team detail"
+msgstr "Détail de l’équipe"
+
+#: inc/team-type.php:35
+msgid "Team function"
+msgstr "Fonction d’équipe"
+
+#: inc/testimonial-type.php:7 inc/testimonial-type.php:8
+msgid "Testimonial"
+msgstr "Témoignage"
+
+#: inc/testimonial-type.php:22
+msgid "Testimonial detail"
+msgstr "Détail du témoignage"
+
+#: content-none.php:8
+msgid "The search returned no results !"
+msgstr "La recherche retourne aucun résultat !"
+
+#. Description of the plugin/theme
+msgid "Theme Boostrap"
+msgstr "Theme Boostrap"
+
+#: assets/wp-bootstrap-comment-walker.php:64
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
